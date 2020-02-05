@@ -1,5 +1,5 @@
 // creating date with moment
-var currentDate = moment().format("MM/DD/YYY");
+var currentDate = moment().format("MM/DD/YYYY hh:mm");
 
 
 // all my variables to be use later
@@ -15,7 +15,7 @@ var currentCity = $("#city-name");
 $(document).ready(function () {
     renderSearchHistory();
 
-    // =================== SAVE USER'S SEARCHES AS A LIST ON THE PAGE ===================
+    // save users searches as list in the page
 
     function renderSearchHistory() {
 
@@ -33,7 +33,8 @@ $(document).ready(function () {
             liElement.addClass("city-list");
             liElement.text(searchedCity);
 
-            // Added icon to delete localSotarge entries from https://icons8.com/icons/set/delete
+        // Added icon to delete localSotarge entries from https://icons8.com/icons/set/delete
+
             var trashIcon = $("<img src=https://img.icons8.com/office/30/000000/delete-sign.png>");
             trashIcon.addClass("delete-icon");
             liElement.append(trashIcon);
@@ -42,16 +43,16 @@ $(document).ready(function () {
     }
 
 
-    // =================== GET CURRENT WEATHER DATA & UV INDEX FROM OPENWEATHER APIs ===================
+    //  Apis to get weather and UV from Open weather 
 
     function getWeather(userCity) {
 
-        var url = `https://api.openweathermap.org/data/2.5/weather?q=${userCity}&APPID=${apiKey}&units=imperial`;
+        var urlQuery = `https://api.openweathermap.org/data/2.5/weather?q=${userCity}&APPID=${apiKey}&units=imperial`;
 
         currentCity.text(userCity + " " + currentDate + " ");
 
         $.ajax({
-            url: url,
+            url: urlQuery,
             method: "GET"
         }).done(function (response) {
             console.log("current city response", response);
@@ -99,7 +100,7 @@ $(document).ready(function () {
         });
 
 
-        // =================== GET 5 DAY FORECAST FROM OPENWEATHER APIs ===================
+        // Get 5 days forecast 
 
         var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${userCity}&mode=json&APPID=${apiKey}&units=imperial`;
 
