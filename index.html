@@ -14,7 +14,40 @@
     <header class=" bg-info text-pink h1 p-3 text-center">Weather Dashboard
     </header>
 
-
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-s-12">
+                    <form class="form-inline pt-4 my-2 p-3 my-lg-0">
+                        <input id="searched-city" class="form-control mr-sm-2 ml-3 " type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button id="search-btn" class="btn btn-outline-slate-grey text-pink my-2 my-sm-0"
+                            type="submit">Search</button>
+                        <div class="col-md-12">
+                            <ul class="list-group p-1 mt-2">
+                            </ul>
+                        </div>
+                </div>
+                <div class="col-md-8 col-s-12 display-flex p-0">
+                    <div class="jumbotron jumbotron-fluid mr-2 mt-2 rounded bg-pink">
+                        <div id="welcome" class="container pr-1 text-slate-grey text-center">
+                            <h2>Welcome to your Weather Dashboard!</h2>
+                            <h4>Search for a city to get your weather.</h4>
+                        </div>
+                        <div id="error" class="container pr-1 text-slate-grey text-center hide">
+                            <h2>Error 404: City Not Found</h2>
+                            <h4>Please try another city.</h4>
+                        </div>
+                        <div id="weather" class="col-md-4 col-s-12 container pr-1 hide ml-4">
+                            <h2 id="city-name"></h2>
+                            <p id="city-temp"></p>
+                            <p id="city-humidity"></p>
+                            <p id="city-wind-speed"></p>
+                            <p id="city-uv-index"></p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
 
     <script src="script.js"></script>
 </body>
