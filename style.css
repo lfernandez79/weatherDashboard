@@ -1,0 +1,46 @@
+body {
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-slate-grey {
+    background-color: #878eac;
+}
+
+.text-slate-grey {
+    color: #878eac;
+}
+
+.bg-pink {
+    background-color: #f3e3eb;
+}
+
+.text-pink {
+    color: #f3e3eb;
+}
+
+.btn-outline-slate-grey {
+    background-color:#878eac;
+}
+
+.card-row {
+    margin-right: 1%;
+}
+
+.btn:hover{
+    background-color: #656b83;
+}
+
+.hide {
+    display: none;
+}
+
+.delete-icon {
+    float: right;
+    cursor: pointer;
+}
+
+.list-group-item {
+    cursor: default;
+}
