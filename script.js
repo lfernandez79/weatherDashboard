@@ -133,11 +133,7 @@ $(document).ready(function () {
         var buttonText = $(this).text();
         getWeather(buttonText);
 
-        // if ($(this).hasClass("delete-icon")) {
-        //     buttonText = ""
-        // } else {
-        //     getWeather(buttonText);
-        // }
+
     });
 
     // Delete searched city on trash icon click
@@ -158,8 +154,6 @@ $(document).ready(function () {
         location.reload();
     });
 
-
-    // =================== CLICK EVENT HANDLER ON SEARCH BUTTON ===================
 
     // click event for search btn
     $("#search-btn").on("click", function (event) {
